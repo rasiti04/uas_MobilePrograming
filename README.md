@@ -12,7 +12,7 @@ halaman berbasis IP address di jaringan lokal.
      (bukan langsung login otomatis)
 
 2. **Beranda** (`lib/pages/beranda/beranda_page.dart`)
-   - Foto toko besar, Tentang Kami, No. Telepon, dan Lokasi (Maps)
+   - Foto toko , Tentang Kami, No. Telepon, dan Lokasi (Maps)
      semuanya langsung tampil tanpa perlu diklik
    - Tombol Logout
 
@@ -30,23 +30,16 @@ halaman berbasis IP address di jaringan lokal.
    - Daftar semua pesanan (GET /api/pesanan)
    - Ubah / Hapus pesanan
    - Ikon pengaturan (kanan atas) -> atur IP address & port server
+6. Detail pesanan 
+   - konfirmasi
+   - cabang,tanggal, waktu
+   - pdf/cetak
 
 ## Koneksi ke Backend
 
 Semua data (produk & pesanan) diambil dari REST API server yang berjalan
-di komputer/laptop yang sama jaringan WiFi-nya dengan HP. Ada 2 pilihan
-backend, pilih salah satu:
-
-- `/backend` -> Node.js + Express (port default 3000)
+di komputer/laptop yang sama jaringan WiFi-nya dengan HP. 
 - `/backend-laravel` -> Laravel (port default 8000)
 
-Atur alamat IP & port lewat halaman **Pesanan -> ikon pengaturan (server icon)**.
 
 ## Firebase Authentication
-
-`lib/firebase_options.dart` dan `android/app/google-services.json` sudah
-diisi konfigurasi asli (bukan placeholder). Kalau mau ganti ke project
-Firebase lain, jalankan ulang:
-```
-flutterfire configure --project=<project-id-firebase>
-```
